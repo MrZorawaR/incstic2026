@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animate.min.css">
+  <link rel="stylesheet" href="css/all.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+    integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="icon" href="images/fav-removebg-preview.png" type="image/x-icon">
+  <link rel="icon" href="images/fav-removebg-preview.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="images/fav-removebg-preview.png">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      box-shadow: none;
+    }
+
+
+    .button1 {
+      margin: 0 10px;
+      padding: 15px 30px;
+      font-size: larger;
+      display: inline-block;
+      background-color: #0047AB;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .button1:hover {
+      background-color: #003580;
+    
+    }
+
+    .multiple-button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+
+    .reges {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+    }
+
+    :root {
+      --dark-grey: #0a1023;
+      --light-blue: #0047ab;
+      --orange: #f28500;
+      --white: #ffffff;
+      --light-grey: #f5f7fb;
+      --border-color: #cbd5e1;
+    }
+    body {
+      background: var(--light-grey);
+      font-family: 'Raleway', sans-serif;
+      color: var(--dark-grey);
+    }
+    .form-container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .form-box {
+      background: var(--white);
+      padding: 50px;
+      border-radius: 16px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+      border-top: 6px solid var(--light-blue);
+    }
+    .form-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .form-header h2 {
+      font-weight: 800;
+      color: var(--dark-grey);
+    }
+    .form-header p {
+      color: #64748b;
+      font-size: 1.05rem;
+      margin-top: 8px;
+    }
+    .section-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--light-blue);
+      margin-top: 40px;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #e2e8f0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .form-label {
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--dark-grey);
+      margin-bottom: 8px;
+    }
+    .form-control, .form-select {
+      border-radius: 8px;
+      padding: 12px 16px;
+      border: 1px solid var(--border-color);
+      background-color: #f8fafc;
+      transition: all 0.3s;
+      font-size: 0.95rem;
+    }
+    .form-control:focus, .form-select:focus {
+      border-color: var(--light-blue);
+      box-shadow: 0 0 0 0.25rem rgba(0, 71, 171, 0.1);
+      background-color: var(--white);
+    }
+    textarea.form-control {
+      resize: vertical;
+      min-height: 100px;
+    }
+    .btn-primary {
+      background-color: var(--light-blue);
+      border-color: var(--light-blue);
+      padding: 16px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      border-radius: 8px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: all 0.3s ease;
+      margin-top: 20px;
+    }
+    .btn-primary:hover {
+      background-color: var(--orange);
+      border-color: var(--orange);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 15px rgba(242, 133, 0, 0.2);
+    }
+    /* Custom file upload */
+    input[type="file"] {
+      padding: 9px;
+      background-color: #f8fafc;
+    }
+    input[type="file"]::file-selector-button {
+      border: none;
+      background: var(--light-blue);
+      padding: 8px 16px;
+      border-radius: 6px;
+      color: var(--white);
+      cursor: pointer;
+      transition: background 0.3s ease;
+      margin-right: 15px;
+      font-weight: 600;
+    }
+    input[type="file"]::file-selector-button:hover {
+      background: var(--orange);
+    }
+    .required-asterisk {
+      color: #ef4444;
+      margin-left: 3px;
+    }
+    #msg {
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header Section -->
+  <header>
+    <nav class="navbar navbar-expand-xl navbar-dark p-0" aria-label="Offcanvas navbar large">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+          <span><img src="images/INCSTIC_Compressed-removebg-preview.png" class="img-fluid cu-logo" alt=""
+              width="110" /></span>
+          <!-- <span><img src="images/CRC_logo.png" class="img-fluid naac-logo" alt=""
+                width="170" /></span> -->
+          <!-- <span><img src="images/AIP_Publishing_logo-removebg-preview (1).png" class="img-fluid naac-logo" alt=""
+              width="110" /></span> -->
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2"
+          aria-controls="offcanvasNavbar2" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar2"
+          aria-labelledby="offcanvasNavbar2Label">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbar2Label">
+              Menu
+            </h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+              aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">About</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="./index.html#about">About GU</a></li>
+                  <li><a class="dropdown-item" href="./index.html#objectives">About INCSTIC</a></li>
+                  <li><a class="dropdown-item" href="./index.html#about">About CSE</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="track-details.html">Call for Paper</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="important-dates.html">Important Dates</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="submission-guidelines.html">Submission Guidelines</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="camera-ready-submission.html">Camera Ready Submission</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="registration.html">Registration</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="./index.html#schedule">Committee</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./index.html#steering-commettieee">Speakers</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#footer">Contact Us</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link mobile-on" href="" class="mobile-show" style="display: none">Register Now&nbsp;&nbsp;
+                  <i class="fa-solid fa-arrow-right"></i></a>
+              </li>
+            </ul>
+            <div class="mobile-university-logo">
+              <img src="https://geetauniversity.edu.in/wp-content/uploads/2022/02/logo2.png" alt="Geeta University Logo"
+                width="150">
+            </div>
+          </div>
+        </div>
+        <div class="register-sec university-logos">
+          <a class="uni-logo" href="/incacct">
+            <span><img src="https://geetauniversity.edu.in/wp-content/uploads/2022/02/logo2.png"
+                class="img-fluid cu-logo" alt="" width="150" /></span>
+
+          </a>
+        </div>
+      </div>
+      <div class="header__top d-flex justify-content-between align-items-center">
+        <div class="header__top-left w-100">
+          <div class="top-notification-slider1 pagination-style overflow-hidden">
+            <div class="tns-item marquee">
+              <a href="Registrationincacct.aspx" target=""
+                title="Register via CUCET to avail of a huge merit-based scholarship. - Apply Now"><span
+                  style="color: var(--bg-darkyellow)">Registration has been Opened.</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </nav>
+
+  </header>
+
+  <!-- header ending -->
+
+  <section class="pt-5">
+    <section id="outsomes" class="pb-100 pt-5">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-md-8">
+            <h3 class="sub-heading blue-text mt-md-3 mb-5">Registration Details</h3>
+            <p class="para">
+              At least one of the authors of the paper has to register for the conference. It is mandatory to present
+              the paper in the conference for the inclusion of the paper in the conference proceedings.
+            </p>
+            <div class="table-responsive">
+              <table class="table table-bordered table-striped mx-auto">
+                <thead>
+                  <tr>
+                    <th style="background-color: #0047AB; color: white;" class="text-center" valign="middle" >Category</th>
+                    <th style="background-color: #0047AB; color: white;" class="text-center" >For Indian Authors and Delegates (in INR)</th>
+                    <th style="background-color: #0047AB; color: white;" class="text-center" >For Foreign Authors and Delegates (in USD)</th>
+                  </tr>
+                 
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="text-center">Graduate Students</td>
+                    <td class="text-center">8000</td>
+                    <td class="text-center">200</td>
+                   
+                  </tr>
+                  <tr>
+                    <td class="text-center">Faculty & Research Scholars</td>
+                    <td class="text-center">9000</td>
+                    <td class="text-center">250</td>
+                   
+                  </tr>
+                  <tr>
+                    <td class="text-center">Industry</td>
+                    <td class="text-center">10500</td>
+                    <td class="text-center">350</td>
+                  
+                  </tr>
+                  <tr>
+                    <td class="text-center">Attendee Only</td>
+                    <td class="text-center">1500</td>
+                    <td class="text-center">100</td>
+                  
+                  </tr>
+                  <tr>
+                    <b><td colspan="3" class="text-center">*For Extra pages (more than 6), per page 1000 INR for Indian and 50 USD for Foreign.</td></b>
+                  </tr>
+                </tbody>
+              </table>
+              <p class="para"><i>NOTE</i>: Registration fee once submitted, it cannot be refunded.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- <div class="text-center ">
+      <h4 class="heading-mini mb-5">Registration details will be shared via email with paper decision.</h4>
+    </div> -->
+    <!-- <div class="text-center mt-3">
+      <a href="#"><button class="button1">Click for Registration</button></a>
+    </div> -->
+  </section>
+  <div class="container mb-5 form-container">
+  <div class="form-box">
+    <div class="form-header">
+      <h2>Paper Registration Form</h2>
+      <p>Please fill out the form using your latest details</p>
+    </div>
+
+    <form id="paperForm">
+      
+      <div class="row g-4">
+        <!-- Corresponding Author -->
+        <div class="col-12">
+          <h5 class="section-title mt-0">Corresponding Author Details</h5>
+        </div>
+        
+        <div class="col-md-12">
+          <label class="form-label">Full Name <span class="required-asterisk">*</span></label>
+          <input class="form-control" name="fullName" placeholder="Enter full name" required>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Email <span class="required-asterisk">*</span></label>
+          <input class="form-control" name="email" type="email" placeholder="example@domain.com" required>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Contact Number <span class="required-asterisk">*</span></label>
+          <input class="form-control" name="contact" placeholder="+1 234 567 8900" required>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Affiliation <span class="required-asterisk">*</span></label>
+          <input class="form-control" name="affiliation" placeholder="University / Organization" required>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Designation <span class="required-asterisk">*</span></label>
+          <input class="form-control" name="designation" placeholder="e.g., Professor, Ph.D. Scholar" required>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">ORCID ID</label>
+          <input class="form-control" name="orcid" placeholder="0000-0000-0000-0000">
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Country <span class="required-asterisk">*</span></label>
+          <input class="form-control" name="country" placeholder="Your Country" required>
+        </div>
+
+        <!-- Co Authors -->
+        <div class="col-12">
+          <h5 class="section-title">Co-Author Details</h5>
+        </div>
+        <div class="col-12">
+          <label class="form-label">Co-Authors</label>
+          <textarea class="form-control" name="coauthors" placeholder="Enter multiple co-authors (Name, Affiliation, Email) separated by commas"></textarea>
+        </div>
+
+        <!-- Paper Info -->
+        <div class="col-12">
+          <h5 class="section-title">Paper Information</h5>
+        </div>
+        <div class="col-md-8">
+          <label class="form-label">Paper Title <span class="required-asterisk">*</span></label>
+          <input class="form-control" name="paperTitle" placeholder="Enter your paper title" required>
+        </div>
+        <div class="col-md-4">
+          <label class="form-label">Paper ID <span class="required-asterisk">*</span></label>
+          <input class="form-control" name="paperId" placeholder="e.g., #1024" required>
+        </div>
+        <div class="col-12">
+          <label class="form-label">Abstract <span class="required-asterisk">*</span></label>
+          <textarea class="form-control" name="abstract" placeholder="Abstract (150–300 words)" required></textarea>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Keywords <span class="required-asterisk">*</span></label>
+          <input class="form-control" name="keywords" placeholder="Enter keywords separated by commas" required>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Track / Theme <span class="required-asterisk">*</span></label>
+          <input class="form-control" name="track" placeholder="Relevant track or theme" required>
+        </div>
+
+        <!-- Presentation -->
+        <div class="col-12">
+          <h5 class="section-title">Presentation Details</h5>
+        </div>
+        <div class="col-md-4">
+          <label class="form-label">Presentation Mode <span class="required-asterisk">*</span></label>
+          <select class="form-select" name="presentationMode" required>
+            <option value="" disabled selected>Select Mode</option>
+            <option value="Oral">Oral</option>
+            <option value="Poster">Poster</option>
+          </select>
+        </div>
+        <div class="col-md-4">
+          <label class="form-label">Participation Mode <span class="required-asterisk">*</span></label>
+          <select class="form-select" name="participationMode" required>
+            <option value="" disabled selected>Select Participation</option>
+            <option value="Online">Online</option>
+            <option value="Offline">Offline</option>
+          </select>
+        </div>
+        <div class="col-md-4">
+          <label class="form-label">Presented By Author? <span class="required-asterisk">*</span></label>
+          <select class="form-select" name="presentedByAuthor" required>
+            <option value="" disabled selected>Select Option</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+          </select>
+        </div>
+
+        <!-- Registration -->
+        <div class="col-12">
+          <h5 class="section-title">Registration Details</h5>
+        </div>
+        <div class="col-md-4">
+          <label class="form-label">Category <span class="required-asterisk">*</span></label>
+          <select class="form-select" name="category" required>
+            <option value="" disabled selected>Select Category</option>
+            <option value="Student">Student</option>
+            <option value="Academic">Academic</option>
+            <option value="Industry">Industry</option>
+          </select>
+        </div>
+        <div class="col-md-4">
+          <label class="form-label">Authors Attending <span class="required-asterisk">*</span></label>
+          <input type="number" class="form-control" name="authorsAttending" placeholder="e.g., 2" required min="1">
+        </div>
+        <div class="col-md-4">
+          <label class="form-label">Payment Status <span class="required-asterisk">*</span></label>
+          <select class="form-select" name="paymentStatus" required>
+            <option value="" disabled selected>Select Status</option>
+            <option value="Paid">Paid</option>
+            <option value="Pending">Pending</option>
+          </select>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Transaction ID <span class="required-asterisk">*</span></label>
+          <input class="form-control" name="transactionId" placeholder="Enter bank transaction ID" required>
+        </div>
+
+        <!-- File Upload -->
+        <div class="col-md-6">
+          <label class="form-label">Payment Proof Upload <span class="required-asterisk">*</span></label>
+          <input type="file" id="fileInput" class="form-control" accept=".pdf,image/*" required>
+        </div>
+
+        <!-- Submit -->
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary w-100">Submit Registration</button>
+        </div>
+      </div>
+
+    </form>
+
+    <p id="msg" class="mt-3 text-center"></p>
+  </div>
+</div>
+
+<script>
+const scriptURL = "https://script.google.com/macros/s/AKfycbx3_-fRTJ6B8lYeZ-u77J6HR2bLkxjVc5xuiDbi7JBhmaiP7tCjASrAJYiffbFH-Bq91Q/exec"; 
+const cloudName = "dxg4atpww";
+const uploadPreset = "INCSTIC";
+
+document.getElementById("paperForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const msg = document.getElementById("msg");
+  const file = document.getElementById("fileInput").files[0];
+
+  if (!file) {
+    alert("Please upload payment proof");
+    return;
+  }
+
+  try {
+    msg.innerText = "Uploading file...";
+
+    // Upload to Cloudinary
+    const cloudData = new FormData();
+    cloudData.append("file", file);
+    cloudData.append("upload_preset", uploadPreset);
+
+    const uploadRes = await fetch(
+      `https://api.cloudinary.com/v1_1/${cloudName}/auto/upload`,
+      {
+        method: "POST",
+        body: cloudData
+        
+      }
+    );
+
+    const uploadResult = await uploadRes.json();
+
+    if (!uploadResult.secure_url) {
+      throw new Error("Upload failed");
+    }
+
+    const fileURL = uploadResult.secure_url;
+
+    // Collect form data
+    const form = e.target;
+    const data = Object.fromEntries(new FormData(form).entries());
+
+    data.fileURL = fileURL;
+
+    msg.innerText = "Submitting form...";
+
+    // Send to Google Sheets
+    await fetch(scriptURL, {
+      method: "POST",
+      body: JSON.stringify(data),
+      mode: "no-cors",
+    });
+
+    msg.innerText = "✅ Submitted Successfully!";
+    form.reset();
+
+    // Reload the page after 5 seconds
+    setTimeout(() => {
+      window.location.reload();
+    }, 5000);
+
+  } catch (err) {
+    console.error(err);
+    msg.innerText = "❌ Error occurred!";
+  }
+});
+</script>
+ 
+<!--footer-->
+  <footer id="footer">
+    <div class="pt-100 pb-100">
+      <div class="container">
+
+
+        <div class="row">
+          <div class="col-sm-6 col-md-3 mb-5 mb-md-0">
+            <h4><b>Contact Us</b></h4>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3479.195812889742!2d76.890688876221!3d29.305931275303802!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390dc3b5533b6d9f%3A0x1b563db61bcc0195!2sGEETA%20UNIVERSITY%2C%20NAULTHA%2C%20PANIPAT!5e0!3m2!1sen!2sin!4v1733814261097!5m2!1sen!2sin"
+              width="200" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+          </div>
+          <div class="col-sm-6 col-md-3 mb-3 mb-md-0 footer-content">
+            <h4><b>Quick Links</b></h4>
+            <ul class="list-unstyled">
+              <li><a href="/archive/incstic2025/" target="_blank"><i class="fa-solid fa-angle-right"></i> &nbsp;INCSTIC-2025 (Previous Edition)</a></li>
+              <li><a href="#about"><i class="fa-solid fa-angle-right"></i> &nbsp;About</a></li>
+              <li><a href="track-details.html"><i class="fa-solid fa-angle-right"></i> &nbsp;Call for Paper</a>
+              </li>
+              <li><a href="registration.html"><i class="fa-solid fa-angle-right"></i> &nbsp;Registration</a></li>
+              <li><a href="#footer"><i class="fa-solid fa-angle-right"></i> &nbsp;Contact Us</a></li>
+              <ul>
+          </div>
+          <div class="col-sm-6 col-md-3 mb-3 mb-md-0 footer-content">
+            <h4><b>Get in Touch</b></h4>
+            <h5 class="mb-2">Dr. Shamneesh Sharma</h5>
+            <p class="mb-0"><a href="tel:+918091764045"><i class="fa-solid fa-phone"></i>&nbsp;&nbsp;+91 8091764045</a></p>
+            <p class="mb-0"><a href="mailto:incstic2026@geetauniversity.edu.in"><i
+                  class="fa-solid fa-envelope"></i>&nbsp;&nbsp;incstic2026@geetauniversity.edu.in</a></p>
+            <p><i class="fa-solid fa-location-dot"></i>&nbsp;&nbsp;<span class="text-center">Geeta University<br>Naultha<br>Panipat, Haryana
+              (INDIA)</span></p>
+          </div>
+          <div class="col-sm-6 col-md-3 mb-3 mb-md-0 footer-content">
+            <!-- <h4 class="invisible">Get in Touch</h4>
+            <h5 class="mb-2">Mr. Ankush Bansal</h5> -->
+            <!-- <p class="mb-0"><a href="tel:+918437715777"><i class="fa-solid fa-phone"></i>&nbsp;&nbsp;8437715777</a></p> -->
+            <br>
+            <!-- <h5 class="mb-2">Dr. Meenu Gupta</h5>
+            <p class="mb-0"><a href="tel:+918708951544"><i class="fa-solid fa-phone"></i>&nbsp;&nbsp; 8708951544</a></p> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="copyright pt-3 pb-3">
+      <div class="container">
+        <p class="text-center text-white mb-0">Copyright © 2026 2nd International Conference on Smart Technologies and
+          Intelligent Computing
+          (INCSTIC-2026)</p>
+      </div>
+    </div>
+  </footer>
+  <!--end footer-->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>

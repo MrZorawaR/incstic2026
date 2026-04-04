@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animate.min.css">
+  <link rel="stylesheet" href="css/all.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+    integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="icon" href="images/fav-removebg-preview.png" type="image/x-icon">
+  <link rel="icon" href="images/fav-removebg-preview.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="images/fav-removebg-preview.png">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      box-shadow: none;
+    }
+
+
+    .button1 {
+      margin: 0 10px;
+      padding: 15px 30px;
+      font-size: larger;
+      display: inline-block;
+      background-color: #0047AB;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .button1:hover {
+      background-color: #003580;
+    
+    }
+
+    .multiple-button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+
+    .reges {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header Section -->
+  <header>
+    <nav class="navbar navbar-expand-xl navbar-dark p-0" aria-label="Offcanvas navbar large">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+          <span><img src="images/INCSTIC_Compressed-removebg-preview.png" class="img-fluid cu-logo" alt=""
+              width="110" /></span>
+          <span><img src="images/CRC_logo.png" class="img-fluid naac-logo" alt=""
+                width="170" /></span>
+          <!-- <span><img src="images/AIP_Publishing_logo-removebg-preview (1).png" class="img-fluid naac-logo" alt=""
+              width="110" /></span> -->
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2"
+          aria-controls="offcanvasNavbar2" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar2"
+          aria-labelledby="offcanvasNavbar2Label">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbar2Label">
+              Menu
+            </h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+              aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">About</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="./index.html#about">About GU</a></li>
+                  <li><a class="dropdown-item" href="./index.html#objectives">About INCSTIC</a></li>
+                  <li><a class="dropdown-item" href="./index.html#about">About CSE</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="track-details.html">Call for Paper</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="important-dates.html">Important Dates</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="submission-guidelines.html">Submission Guidelines</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="camera-ready-submission.html">Camera Ready Submission</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="registration.html">Registration</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="./index.html#schedule">Committee</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./index.html#steering-commettieee">Speakers</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#footer">Contact Us</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link mobile-on" href="" class="mobile-show" style="display: none">Register Now&nbsp;&nbsp;
+                  <i class="fa-solid fa-arrow-right"></i></a>
+              </li>
+            </ul>
+            <div class="mobile-university-logo">
+              <img src="https://geetauniversity.edu.in/wp-content/uploads/2022/02/logo2.png" alt="Geeta University Logo"
+                width="150">
+            </div>
+          </div>
+        </div>
+        <div class="register-sec university-logos">
+          <a class="uni-logo" href="/incacct">
+            <span><img src="https://geetauniversity.edu.in/wp-content/uploads/2022/02/logo2.png"
+                class="img-fluid cu-logo" alt="" width="150" /></span>
+
+          </a>
+        </div>
+      </div>
+      <div class="header__top d-flex justify-content-between align-items-center">
+        <div class="header__top-left w-100">
+          <div class="top-notification-slider1 pagination-style overflow-hidden">
+            <div class="tns-item marquee">
+              <a href="Registrationincacct.aspx" target=""
+                title="Register via CUCET to avail of a huge merit-based scholarship. - Apply Now"><span
+                  style="color: var(--bg-darkyellow)">Registration has been Opened.</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </nav>
+
+  </header>
+
+  <!-- header ending -->
+
+  <section class="py-5">
+    <section id="outsomes" class="pb-100 pt-5">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-md-8">
+            <h3 class="sub-heading blue-text mt-md-3 mb-5">Registration Details</h3>
+            <p class="para">
+              At least one of the authors of the paper has to register for the conference. It is mandatory to present
+              the paper in the conference for the inclusion of the paper in the conference proceedings.
+            </p>
+            <div class="table-responsive">
+              <table class="table table-bordered table-striped mx-auto">
+                <thead>
+                  <tr>
+                    <th style="background-color: #0047AB; color: white;" class="text-center" valign="middle" >Category</th>
+                    <th style="background-color: #0047AB; color: white;" class="text-center" >For Indian Authors and Delegates (in INR)</th>
+                    <th style="background-color: #0047AB; color: white;" class="text-center" >For Foreign Authors and Delegates (in USD)</th>
+                  </tr>
+                 
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="text-center">Graduate Students</td>
+                    <td class="text-center">8000</td>
+                    <td class="text-center">200</td>
+                   
+                  </tr>
+                  <tr>
+                    <td class="text-center">Faculty & Research Scholars</td>
+                    <td class="text-center">9000</td>
+                    <td class="text-center">250</td>
+                   
+                  </tr>
+                  <tr>
+                    <td class="text-center">Industry</td>
+                    <td class="text-center">10500</td>
+                    <td class="text-center">350</td>
+                  
+                  </tr>
+                  <tr>
+                    <td class="text-center">Attendee Only</td>
+                    <td class="text-center">1500</td>
+                    <td class="text-center">100</td>
+                  
+                  </tr>
+                  <tr>
+                    <b><td colspan="3" class="text-center">*For Extra pages (more than 6), per page 1000 INR for Indian and 50 USD for Foreign.</td></b>
+                  </tr>
+                </tbody>
+              </table>
+              <p class="para"><i>NOTE</i>: Registration fee once submitted, it cannot be refunded.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="text-center ">
+      <h4 class="heading-mini mb-5">Registration details will be shared via email with paper decision.</h4>
+    </div>
+    <!-- <div class="text-center mt-3">
+      <a href="#"><button class="button1">Click for Registration</button></a>
+    </div> -->
+  </section>
+ 
+  <footer id="footer">
+    <div class="pt-100 pb-100">
+      <div class="container">
+
+
+        <div class="row">
+          <div class="col-sm-6 col-md-3 mb-5 mb-md-0">
+            <h4><b>Contact Us</b></h4>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3479.195812889742!2d76.890688876221!3d29.305931275303802!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390dc3b5533b6d9f%3A0x1b563db61bcc0195!2sGEETA%20UNIVERSITY%2C%20NAULTHA%2C%20PANIPAT!5e0!3m2!1sen!2sin!4v1733814261097!5m2!1sen!2sin"
+              width="200" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+          </div>
+          <div class="col-sm-6 col-md-3 mb-3 mb-md-0 footer-content">
+            <h4><b>Get in Touch</b></h4>
+            <h5 class="mb-2">Dr. Jaskaran Singh</h5>
+            <p class="mb-0"><a href="tel:+918283864936"><i class="fa-solid fa-phone"></i>&nbsp;&nbsp;8283864936</a></p>
+            <p class="mb-0"><a href="mailto:incstic2025@geetauniversity.edu.in"><i
+                  class="fa-solid fa-envelope"></i>&nbsp;&nbsp;incstic2025@geetauniversity.edu.in</a></p>
+            <p><i class="fa-solid fa-location-dot"></i>&nbsp;&nbsp;Geeta University<br>Naultha<br>Panipat, Haryana
+              (INDIA)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="copyright pt-3 pb-3">
+      <div class="container">
+        <p class="text-center text-white mb-0">Copyright © 2025 1st International Conference on Smart Technologies and
+          Intelligent Computing
+          (INCSTIC-2025)</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>

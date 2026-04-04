@@ -1,0 +1,1963 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family:Raleway;
+
+}
+
+body {
+    scroll-behavior: smooth;
+}
+
+  
+
+:root {
+    --dark-grey: #0a1023;
+    --light-blue: #0047ab;
+    --orange: #f28500;
+    --white: #ffffff;
+    --black: #101010;
+    --light-grey: #d7d8d8;
+    --mid-grey: #747474;
+    --orange-bg: #f28500;
+}
+
+
+/* FONT FACE */
+@font-face {
+    font-family: 'D-DIN';
+    src: url('../fonts/D-DIN.woff2') format('woff2'),
+        url('../fonts/D-DIN.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lufga';
+    src: url('../fonts/Lufga-Regular.woff2') format('woff2'),
+        url('../fonts/Lufga-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lufga';
+    src: url('../fonts/Lufga-SemiBold.woff2') format('woff2'),
+        url('../fonts/Lufga-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lufga';
+    src: url('../fonts/Lufga-Bold.woff2') format('woff2'),
+        url('../fonts/Lufga-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'D-DIN Exp';
+    src: url('../fonts/D-DINExp.woff2') format('woff2'),
+        url('../fonts/D-DINExp.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lufga';
+    src: url('../fonts/Lufga-Medium.woff2') format('woff2'),
+        url('../fonts/Lufga-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'D-DIN';
+    src: url('../fonts/D-DIN-Bold.woff2') format('woff2'),
+        url('../fonts/D-DIN-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Euclid Circular A';
+    src: url('../fonts/EuclidCircularA-Light.woff2') format('woff2'),
+        url('../fonts/EuclidCircularA-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Euclid Circular A';
+    src: url('../fonts/EuclidCircularA-Medium.woff2') format('woff2'),
+        url('../fonts/EuclidCircularA-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Euclid Circular A';
+    src: url('../fonts/EuclidCircularA-Bold.woff2') format('woff2'),
+        url('../fonts/EuclidCircularA-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Euclid Circular A';
+    src: url('../fonts/EuclidCircularA-SemiBold.woff2') format('woff2'),
+        url('../fonts/EuclidCircularA-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Euclid Circular A';
+    src: url('../fonts/EuclidCircularA-Regular.woff2') format('woff2'),
+        url('../fonts/EuclidCircularA-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+/* END FONT FACE */
+
+body {
+    font-family: 'D-DIN';
+    font-size: 16px;
+    line-height: normal;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+.orange-text {
+    color: var(--orange);
+}
+
+.blue-text {
+    color: var(--light-blue);
+}
+
+.fw-500 {
+    font-weight: 500;
+}
+
+.fw-600 {
+    font-weight: 600;
+}
+
+.w-60 {
+    width: 60%;
+}
+
+.w-40 {
+    width: 40%;
+}
+
+.pt-100 {
+    padding-top: 100px;
+}
+
+.pb-100 {
+    padding-bottom: 100px;
+}
+
+.pb-265 {
+    padding-bottom: 265px;
+}
+
+.pt-110 {
+    padding-top: 110px;
+}
+
+.pb-90 {
+    padding-bottom: 90px;
+}
+
+.gap-20 {
+    row-gap: 30px;
+}
+
+
+/* Header */
+
+header {
+    position: relative;
+    z-index: 9;
+}
+
+header .navbar {
+    background-color: #eee;
+    transition: .2s ease-in-out;
+    -webkit-transition: .2s ease-in-out;
+    -moz-transition: .2s ease-in-out;
+    -ms-transition: .2s ease-in-out;
+    -o-transition: .2s ease-in-out;
+    /* overflow-x: hidden; */
+}
+
+header .navbar::-webkit-scrollbar {
+    display: none;
+}
+
+header .navbar.sticky {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+
+}
+
+header .navbar .navbar-brand {
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+
+
+header .navbar .navbar-brand img {
+    position: relative;
+    z-index: 9;
+}
+
+header .navbar .navbar-nav {
+    gap: 5px;
+}
+
+header .navbar .navbar-nav li a {
+    color: var(--dark-grey);
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+}
+
+header .navbar .navbar-nav li a.orange-text {
+    color: var(--orange-bg);
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+header .navbar .navbar-nav li a:hover {
+    color: var(--light-blue);
+}
+
+.register-sec a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    z-index: 9;
+}
+
+.register-sec a:hover {
+    color: var(--dark-grey);
+}
+
+.register-sec {
+    position: relative;
+    display: block;
+    padding: 46px 15px 46px 45px;
+}
+
+
+.university-logos {
+    padding: 0 0;
+}
+
+.register-sec img {
+    position: relative;
+    z-index: 99;
+}
+
+.uni-logo {
+    display: flex;
+    gap: 10px;
+    padding: 0 !important;
+}
+
+.navbar>.container,
+.navbar>.container-fluid,
+.navbar>.container-lg,
+.navbar>.container-md,
+.navbar>.container-sm,
+.navbar>.container-xl,
+.navbar>.container-xxl {
+    align-items: stretch;
+}
+
+.navbar .offcanvas-body {
+    align-items: center;
+    height: 100%;
+}
+
+.navbar .dropdown-menu {
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    top: 130%;
+}
+
+.navbar .dropdown-menu li a {
+    padding: 10px 15px;
+}
+
+.navbar .dropdown-menu li a:hover {
+    background-color: var(--light-blue);
+    color: var(--white) !important;
+}
+
+header .navbar .navbar-nav li a.show {
+    color: var(--mid-grey);
+}
+
+.mobile-university-logo {
+    display: none;
+}
+
+
+/* End Header */
+
+.sub-heading {
+    font-family: 'Lufga';
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 36px;
+}
+
+/* Hero Banner */
+.hero-banner {
+    position: relative;
+}
+
+.hero-banner::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.main-content {
+    position: relative;
+}
+
+.main-content h1 {
+    color: var(--dark-grey);
+    font-size: 42px;
+    line-height: 42px;
+    font-family: 'Lufga';
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+span.conference-name {
+    font-size: 36px;
+    font-weight: 500;
+    color: #747474;
+}
+
+span.conference-name small {
+    text-transform: capitalize;
+}
+
+.main-content h4 {
+    font-size: 26px;
+    line-height: 26px;
+}
+
+.main-content h4 span {
+    color:whitesmoke;
+}
+
+.main-content p {
+    color: var(--dark-grey);
+    font-family: 'Lufga';
+    font-size: 18px;
+    line-height: 24px;
+
+}
+
+.main-content p.pb-205 {
+    padding-bottom: 205px;
+}
+
+.main-content p.fw-24 {
+    font-size: 18px;
+    line-height: 20px;
+}
+
+.university-logos {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.conference-details {
+    display: inline-flex;
+    flex-direction: column;
+    max-width: 320px;
+}
+
+#conference-dates .conference-details,
+.conference-details {
+    min-width: 320px;
+}
+
+#objective .conference-details {
+    position: sticky;
+    top: 115px;
+    align-self: flex-start;
+}
+
+.conference-date,
+.conference-venue {
+    padding: 20px 25px;
+    background-color: rgb(10 16 35 / 67%);
+    gap: 15px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+
+}
+
+.conference-details h5 sup {
+    top: -13px;
+    font-size: 12px;
+}
+
+.orange-bg {
+    background-color: var(--light-blue);
+}
+
+#about .conference-venue.orange-bg {
+    background: #e5e5e5;
+}
+
+#about .conference-venue.orange-bg i,
+#about .conference-venue.orange-bg h6 {
+    color: #000;
+}
+
+
+
+.conference-date i,
+.conference-venue i {
+    color: rgb(255 255 255 / 53%);
+    font-size: 18px;
+}
+
+.conference-date h5,
+.conference-venue h5 {
+    color: var(--white);
+    font-family: 'Lufga';
+    font-weight: bold;
+    font-size: 24px;
+    line-height: normal;
+}
+
+.conference-date h5 span,
+.conference-venue h5 span {
+
+    font-size: 25px;
+}
+
+.conference-venue h6 {
+    color: var(--white);
+    font-family: 'Lufga';
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 500;
+}
+
+.conference-venue h6 small {
+    font-size: 14px;
+}
+
+.right-sec {
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+    flex-wrap: wrap-reverse;
+}
+
+.para {
+    font-family: Lufga;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: justify;
+}
+
+/* Hero Banner End Here */
+
+.rightSec {
+    display: flex;
+    justify-content: end;
+}
+
+#objective {
+    position: relative;
+}
+
+#objective:before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff7f0c9;
+}
+
+#objective .container {
+    position: relative;
+}
+
+.img-shadow {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+
+/*About */
+.about {
+    background-color: var(--white);
+}
+
+.about-content p {
+    font-family: 'Lufga';
+    color: #404040;
+}
+
+.h-minus-160 {
+    position: relative;
+    margin-top: -160px;
+}
+
+/* About End Here */
+
+.conference-detail {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 50px;
+    align-items: center;
+    align-content: center;
+}
+
+.conference-content .conference-name {
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--white);
+}
+
+
+.conference-content h4 {
+    font-size: 30px;
+    line-height: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Lufga';
+    color: #f28500;
+}
+
+.conference-content h4 span {
+    color: var(--white);
+}
+
+.conference-details .register-btn {
+    padding: 20px;
+    margin-top: 5px;
+    background: var(--orange-bg);
+    transition: all ease-in-out 0.5s;
+    border-radius: 10px;
+}
+
+.conference-details .register-btn:hover {
+    color: var(--black);
+    background: var(--white);
+}
+
+.list-style li {
+    font-size: 16px;
+    line-height: 22px;
+    font-family: Lufga;
+    list-style: none;
+    position: relative;
+    padding-left: 45px;
+    margin-bottom: 5px;
+}
+
+.list-style li::before {
+    position: absolute;
+    background: url('../images/circle-tick.png')no-repeat;
+    width: 22px;
+    height: 22px;
+    content: "";
+
+    top: 3px;
+    left: 0;
+    /* width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: #cacaca; */
+}
+
+.list-style li a {
+    color: var(--light-blue);
+}
+
+.price-listing .price-list,
+.price-listing .price-list:last-child {
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.price-listing .price-list:first-child {
+    border-top: 2px solid #f0f0f0;
+}
+
+.price-list p,
+.note {
+    font-family: lufga;
+    color: #404040;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+
+.certificate-sec {
+    display: inline-flex;
+    gap: 20px;
+    flex-wrap: nowrap;
+}
+
+/* Proposed Program Schedule */
+#schedule {
+    background: #fff7f0;
+}
+
+
+/* CUSTOM ACCORDION AND TABS */
+#custom-tabs .nav-link {
+    font-family: 'Lufga';
+    font-weight: bold;
+    color: var(--dark-grey);
+    text-align: left;
+}
+
+#custom-tabs .nav-link span {
+    display: block;
+    color: #404040;
+    font-size: 14px;
+    line-height: 36px;
+    font-weight: 500;
+}
+
+#custom-tabs .nav-tabs {
+    border: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+#custom-tabs .nav-link {
+    border: none;
+    background: transparent;
+    border-bottom: 4px solid #fff7f0;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 14px;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+
+#custom-tabs .nav-link.active,
+#custom-tabs .nav-link:hover {
+    border-bottom: 4px solid var(--light-blue) !important;
+    color: var(--light-blue);
+}
+
+#custom-tabs .accordion-body .list-icon {
+    padding-left: 35px;
+}
+
+.table-responsive tr td p {
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.table-responsive tr th p {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.table-responsive tr td p strong {
+    font-weight: 600;
+}
+
+.list-icon {
+    position: relative;
+}
+
+.list-icon::before {
+    position: absolute;
+    background: url('../images/angle-circle-right.png')no-repeat;
+    content: "";
+    top: 8px;
+    left: 0;
+    width: 16px;
+    height: 16px;
+}
+
+.list-icon p {
+    font-size: 14px;
+    line-height: 30px;
+    font-weight: 500;
+    font-family: Lufga;
+}
+
+.mw-600 {
+    max-width: 600px;
+}
+
+/* */
+
+
+/* */
+.commettiee-member {
+    gap: 30px;
+    align-items: center;
+}
+
+.member-details {
+    font-family: 'Lufga';
+    color: #fff;
+}
+
+.member-details h6 {
+    font-size: 14px;
+    line-height: 15px;
+    background: #000;
+    color: #fff;
+    padding: 5px 8px;
+    display: inline-flex;
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+.member-details h2 {
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.member-details p {
+    font-size: 13px;
+    line-height: 15px;
+    margin-bottom: 0;
+}
+
+.gap-30 {
+    row-gap: 30px;
+}
+
+.commettiee-member.flex-column {
+    gap: 15px;
+}
+
+.commettiee-member.flex-column img {
+    width: 100%;
+    filter: grayscale(1);
+    transition: all 0.3s ease-in-out;
+}
+
+.commettiee-member.flex-column:hover img {
+    filter: grayscale(0);
+}
+
+
+/* */
+.resourcePersonDetails {
+    font-family: 'Euclid Circular A';
+    font-weight: 500;
+    padding: 35px;
+    margin: 0 10px;
+    margin-top: 75px;
+    margin-bottom: 10px;
+    -webkit-box-shadow: 0px -1px 7px 0px rgba(0, 0, 0, 0.15) !important;
+    -moz-box-shadow: 0px -1px 7px 0px rgba(0, 0, 0, 0.15) !important;
+    box-shadow: 0px -1px 7px 0px rgba(0, 0, 0, 0.15) !important;
+}
+
+.resourcePersonDetails div {
+    margin-top: -90px;
+    position: relative;
+    z-index: 9999;
+}
+
+.resourcePersonDetails p {
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.resourcePersonDetails h5 {
+    font-size: 18px;
+    line-height: 14px;
+    font-family: 'Lufga';
+    font-weight: bold;
+    color: #404040;
+}
+
+ul.member-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 15px;
+}
+
+.member-list li {
+    font-family: Lufga;
+    color: #404040;
+    width: 16.6%;
+    padding-right: 10px;
+}
+
+.member-list li p {
+    display: none;
+}
+
+.member-list li h5 {
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: bold;
+}
+
+.resource-slider .slick-arrow {
+    filter: invert(0.3);
+}
+
+.table-responsive p {
+    margin-bottom: 0;
+}
+
+.table-responsive {
+    font-family: Lufga;
+}
+
+#custom-tabs .table-responsive {
+    height: 500px;
+}
+
+.table-responsive table tr th {
+    background: var(--light-blue);
+    color: var(--white);
+    font-weight: 400;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+/* Footer */
+footer {
+    background-color: var(--light-grey);
+}
+
+/* footer .row {
+    align-content: center;
+    align-items: center;
+} */
+
+
+footer .contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    flex-wrap: wrap;
+    align-content: center;
+
+}
+
+footer .contact-info h6 {
+    font-family: 'D-DIN';
+    color: var(--dark-grey);
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+footer .contact-info h6 a {
+    color: var(--dark-grey);
+}
+
+footer .contact-info h6 a:hover,
+.register-btn:hover {
+    color: var(--light-blue);
+}
+
+.footer-content p {
+    color: var(--black);
+    font-family: 'Lufga';
+    margin-bottom: 8px;
+    display: block;
+}
+
+.footer-content p a,
+.footer-content ul li a {
+    color: var(--black);
+    font-family: 'Lufga';
+    margin-bottom: 8px;
+    display: inline-block;
+}
+
+.footer-content p a:hover,
+.footer-content ul li a:hover {
+    color: var(--light-blue);
+}
+
+.footer-content h5 {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.btns {
+    display: flex;
+    gap: 10px;
+}
+
+.register-btn {
+    color: var(--white);
+    font-weight: 600;
+    text-transform: uppercase;
+    background: var(--light-blue);
+    padding: 20px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    text-align: left !important;
+}
+
+.register-btn.mid-grey {
+    background: var(--mid-grey);
+}
+
+.register-btn:hover {
+    background: var(--white);
+    color: var(--black);
+}
+
+footer .register-btn {
+    background: var(--light-blue);
+    display: inline-flex;
+    padding: 15px;
+    border-radius: 3px;
+    transition: all 0.3s ease-in-out;
+}
+
+footer .register-btn:hover {
+    background: var(--dark-grey);
+    color: var(--white)
+}
+
+.copyright {
+    background: var(--light-blue);
+}
+
+
+/* End Footer Here*/
+
+/*Registration Page */
+#customTab {
+    justify-content: center;
+    border: none;
+}
+
+#customTab li button {
+    font-size: 18px;
+    line-height: 30px;
+    font-family: lufga;
+    color: #666;
+    font-weight: 500;
+    border: none;
+    border-bottom: 4px solid #fff !important;
+}
+
+#customTab li button.active {
+    color: #e88b2f !important;
+    border-bottom: 4px solid #e88b2f !important;
+}
+
+#customTabContent {
+    padding: 50px;
+    border-radius: 10px;
+    background: #fafafa;
+}
+
+.form-sec {
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+
+.form-sec label {
+    min-width: 210px;
+    margin-bottom: 0;
+    font-size: 16px;
+    line-height: 18px;
+    font-family: lufga;
+    color: #404040;
+    font-weight: 500;
+    padding-right: 10px;
+    word-wrap: break-word;
+}
+
+.form-sec input {
+    font-size: 16px;
+    line-height: 18px;
+    font-family: lufga;
+    color: #404040;
+    font-weight: 500;
+    padding: 13px 15px;
+    border-radius: 10px;
+    border: 1px solid #b3b3b3;
+}
+
+.form-sec input::placeholder {
+    color: #d0d0d0;
+}
+
+.form-sec .form-select {
+    font-size: 16px;
+    line-height: 18px;
+    font-family: lufga;
+    color: #404040;
+    font-weight: 500;
+    padding: 13px 15px;
+    border-radius: 10px;
+    border: 1px solid #b3b3b3;
+}
+
+.form-btns input[type="submit"] {
+    font-size: 16px;
+    line-height: 30px;
+    font-family: lufga;
+    font-weight: 500;
+    text-transform: uppercase;
+    border-radius: 0;
+    padding: 9px 41px;
+    border: none;
+    background: #8d8d8d;
+}
+
+.form-btns input[name="btnSubmit"],
+#btnAlreadyEmail {
+    background: #e88b2f;
+}
+
+.form-btns input:hover,
+#btnAlreadyEmail:hover {
+    background: var(--dark-grey);
+}
+
+.form-btns {
+    justify-content: center;
+    display: flex;
+    gap: 10px;
+}
+
+.validation-error {
+    font-size: 12px;
+    font-family: Lufga;
+    font-weight: 500;
+    margin-top: 5px;
+    display: flex;
+}
+
+#lblTotalPayment,
+#lblFees {
+    font-size: 16px;
+    line-height: 18px;
+    font-family: lufga;
+    color: #404040;
+    font-weight: 500;
+    padding: 13px 15px;
+    border-radius: 10px;
+    border: 1px solid #b3b3b3;
+}
+
+#divPayNowBtn .control-label {
+    margin-bottom: 7px;
+    font-size: 16px;
+    line-height: 18px;
+    font-family: lufga;
+    color: #404040;
+    font-weight: 500;
+    padding-right: 10px;
+    word-wrap: break-word;
+}
+
+#btnPay {
+    font-size: 16px;
+    line-height: 30px;
+    font-family: lufga;
+    font-weight: 500;
+    text-transform: uppercase;
+    border-radius: 0;
+    padding: 9px 41px;
+    border: none;
+}
+
+input#btnPay:hover {
+    background: #d0853b;
+}
+
+#dvPay h3 {
+    padding: 10px;
+    font-family: 'Lufga';
+    font-weight: 600;
+    font-size: 24px;
+    line-height: normal;
+    margin: 0;
+}
+
+#h4Msg {
+    font-family: 'Lufga';
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+/*End Registration Page */
+
+
+
+/* INNER PAGE */
+#inner-banner:before {
+    position: absolute;
+    content: "";
+    background: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#inner-banner .container {
+    position: relative;
+    z-index: 1;
+    color: var(--white);
+    font-family: Lufga;
+}
+
+.custom-accordion .accordion-button {
+    font-size: 16px;
+    font-family: 'Lufga';
+    font-weight: 600;
+    background: var(--dark-grey);
+    color: var(--white);
+    display: flex !important;
+    border-radius: 0;
+}
+
+.custom-accordion .accordion-button[aria-expanded="true"] {
+    background-color: var(--light-blue);
+}
+
+.custom-accordion ul li {
+    font-family: lufga;
+}
+
+.custom-accordion ul.listing-2 {
+    column-count: 2;
+}
+
+.custom-accordion .accordion-button:not(.collapsed)::after,
+.custom-accordion .accordion-button::after {
+    filter: invert(1);
+}
+
+.contact-us-form {
+    padding: 30px;
+    border-radius: 25px;
+    font-family: Lufga;
+}
+
+.contact-us-form .form-control {
+    min-height: 48px;
+}
+
+.contact-us-form .form-label {
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.contact-us-form input::placeholder,
+.contact-us-form textarea::placeholder {
+    color: #8d8d8d;
+}
+
+.header__top {
+    display: none !important;
+}
+
+.sticky .header__top {
+    display: flex !important;
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    padding: 10px 15px;
+    background: rgb(0 71 171 / 80%);
+    border-radius: 10px;
+    color: #fff;
+    font-weight: bold;
+    backdrop-filter: blur(5px) contrast(80%);
+    -webkit-backdrop-filter: blur(5px) contrast(80%);
+}
+
+.header.sticky .top-notification-slider {
+    background: #303339;
+    background: transparent;
+}
+
+.marquee {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scrollLeft 20s linear infinite;
+    padding-left: 101%;
+    overflow: hidden;
+    height: 17px;
+}
+
+.marquee:hover {
+    animation-play-state: paused
+}
+
+.marquee a {
+    color: var(--white);
+}
+
+@keyframes scrollLeft {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-100%)
+    }
+}
+
+.registration-header {
+    gap: 10px;
+    align-items: center;
+}
+
+.nav-tabs {
+    display: flex;
+    gap: 10px;
+}
+
+.tab-btn {
+    text-transform: uppercase;
+    background: var(--orange-bg);
+    padding: 15px 25px;
+    color: #fff;
+    font-family: 'Lufga';
+    border-radius: 5px;
+}
+
+.tab-btn.active {
+    background-color: #f28500b5 !important;
+}
+
+.glimpse-tabs {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+    border: none;
+}
+
+.previous-stats p,
+.previous-stats p a {
+    color: #fff;
+    font-weight: 600;
+}
+
+
+
+
+
+@media only screen and (min-width: 1920px) {
+    .container {
+        max-width: 1600px;
+    }
+
+    header .navbar .navbar-nav li a {
+        color: var(--dark-grey);
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: 500;
+        transition: all 0.3s ease-in-out;
+        letter-spacing: normal;
+    }
+}
+
+@media(min-width:1600px) {
+    header .container {
+        max-width: 1575px;
+    }
+
+    .hero-banner.pt-110 {
+        padding-top: 150px;
+    }
+
+    .hero-banner.pb-90 {
+        padding-bottom: 150px;
+    }
+}
+
+
+@media(max-width:1599px) {
+    .register-sec {
+        padding: 20px 15px 20px 15px;
+    }
+
+    .register-sec img {
+        width: 100px;
+    }
+
+    header .navbar .navbar-nav li a,
+    .register-sec a {
+        font-size: 14px;
+    }
+
+    header .navbar-brand .cu-logo {
+        width: 100px;
+    }
+
+    header .navbar-brand .naac-logo {
+        width: 110px;
+    }
+
+    header .navbar .navbar-nav li a,
+    .register-sec a {
+        font-size: 11px;
+    }
+
+    header .navbar-brand .cu-logo {
+        width: 80px;
+    }
+
+    header .navbar-brand .naac-logo {
+        width: 75px;
+    }
+
+    header .navbar .navbar-brand {
+        margin-right: 5px;
+    }
+}
+
+@media(max-width:1400px) {
+    header .navbar .navbar-nav {
+        gap: 0px;
+        padding-right: 0 !important;
+    }
+
+    .conference-content h4 {
+        font-size: 24px;
+        line-height: 24px;
+    }
+
+    .conference-date h5,
+    .conference-venue h5 {
+        font-size: 36px;
+        line-height: 24px;
+    }
+
+    .member-details h2 {
+        font-size: 20px;
+        line-height: 20px;
+    }
+
+    .member-details {
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    .commettiee-member img {
+        min-width: 150px;
+    }
+
+    .member-list li h5 {
+        font-size: 18px;
+        line-height: 18px;
+    }
+
+    .member-list li {
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    .form-sec label {
+        min-width: 180px;
+    }
+
+    #custom-tabs .nav-link {
+        font-size: 15px;
+    }
+
+    .sub-heading {
+        font-size: 28px;
+        line-height: normal;
+    }
+
+    #conference-dates .conference-details,
+    .conference-details {
+        min-width: 285px;
+    }
+
+    header .navbar .navbar-brand {
+        padding-right: 0;
+    }
+}
+
+@media(max-width:1365px) {
+    /* .header .navbar-brand .naac-logo {
+        width: 80px;
+    }
+
+    header .navbar-brand .cu-logo,
+    header .navbar-brand .naac-logo {
+        width: 100px;
+    } */
+
+    header .navbar .navbar-nav li a,
+    .register-sec a {
+        font-size: 13px;
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+    }
+
+    .register-sec a.uni-logo {
+        width: 85px;
+    }
+
+    .conference-date h5,
+    .conference-venue h5 {
+        font-size: 24px;
+        line-height: 24px;
+    }
+
+    .register-sec {
+        padding: 20px 0px 20px 0px;
+    }
+}
+
+@media(max-width:1199px) {
+    header .navbar .navbar-brand {
+        gap: 10px;
+    }
+
+    header .navbar-brand .cu-logo {
+        width: 135px;
+    }
+
+    header .navbar-brand .naac-logo {
+        width: 100px;
+    }
+
+    header .navbar .navbar-nav li a,
+    .register-sec a {
+        font-size: 14px;
+        color: var(--white);
+    }
+
+    header .navbar .navbar-nav {
+        gap: 2px;
+        padding: 0 !important;
+        width: 100%;
+    }
+
+    .offcanvas-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: baseline !important;
+    }
+
+    .navbar-nav.justify-content-center {
+        justify-content: flex-start !important;
+    }
+
+    .main-content h1 {
+        font-size: 48px;
+        line-height: 48px;
+    }
+
+    .conference-date h5,
+    .conference-venue h5 {
+        font-size: 30px;
+        line-height: 24px;
+    }
+
+    .main-content p.pb-205 {
+        padding-bottom: 90px;
+    }
+
+    .main-content p {
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    .main-content p.fw-24 {
+        font-size: 18px;
+    }
+
+    .pt-100 {
+        padding-top: 60px;
+    }
+
+    .pb-100 {
+        padding-bottom: 60px;
+    }
+
+    .sub-heading {
+        font-size: 28px;
+    }
+
+    .conference-detail {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .conference-content h4 br {
+        display: none;
+    }
+
+    .conference-details {
+        max-width: 100%;
+    }
+
+    .conference-date h5 span,
+    .conference-venue h5 span {
+        font-size: 18px;
+    }
+
+    .university-logos {
+        display: none;
+    }
+
+    .dropdown-toggle::after {
+        position: absolute;
+        right: 15px;
+    }
+
+    .offcanvas {
+        background: var(--light-blue) !important;
+    }
+
+    .navbar .dropdown-menu {
+        background: #002253;
+    }
+
+    header .navbar .navbar-nav li a.show {
+        color: var(--white);
+    }
+
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,71,171' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+    }
+
+    #conference-dates .conference-details,
+    .conference-details {
+        min-width: 300px;
+    }
+
+    .mobile-university-logo {
+        display: flex;
+        padding: 15px;
+        justify-content: center;
+        width: 100%;
+    }
+
+    #nav-tabContent .accordion-button {
+        font-size: 16px;
+        font-family: 'Lufga';
+        font-weight: 600;
+        background: var(--dark-grey);
+        color: var(--white);
+        display: flex !important;
+    }
+
+    .accordion-button:not(.collapsed)::after,
+    .accordion-button::after {
+        filter: invert(1);
+    }
+
+    #nav-tabContent .accordion-button[aria-expanded="true"] {
+        background-color: var(--light-blue);
+    }
+
+    .accordion-button:focus {
+        box-shadow: none;
+    }
+
+    #nav-tabContent .accordion-collapse {
+        display: none;
+    }
+
+    #nav-tabContent .accordion-collapse.show {
+        display: block;
+    }
+
+    .table-responsive p {
+        font-size: 14px;
+    }
+}
+
+@media(max-width:991px) {
+    .register-sec {
+        display: none;
+    }
+
+    header .navbar .navbar-nav li a,
+    .register-sec a {
+        font-size: 14px;
+    }
+
+    .navbar .navbar-toggler {
+        border: none;
+        box-shadow: none;
+    }
+
+    .main-content h1 {
+        font-size: 36px;
+        line-height: 36px;
+    }
+
+    .conference-date h5,
+    .conference-venue h5 {
+        font-size: 24px;
+        line-height: 20px;
+    }
+
+    .sub-heading {
+        font-size: 24px;
+    }
+
+    .commettiee-member {
+        flex-direction: column;
+    }
+
+    .commettiee-member img {
+        min-width: 100%;
+    }
+
+    .member-list li {
+        width: 25%;
+    }
+
+    /* .rightSec {
+        display: none;
+    } */
+
+    .about-content p {
+        font-size: 14px;
+    }
+
+    .conference-content h4 {
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+    .conference-venue h6 {
+        font-size: 16px;
+        line-height: 16px;
+    }
+
+    .conference-date h5,
+    .conference-venue h5 {
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+    #custom-tabs .nav-tabs {
+        justify-content: flex-start;
+        gap: 10px;
+    }
+
+
+
+    footer .contact-info {
+        gap: 5px;
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    .footer-content p,
+    .footer-content p a,
+    .footer-content ul li a {
+        font-size: 13px;
+    }
+}
+
+
+@media(min-width:768px) {
+    #registration-page {
+        min-height: 100vh;
+    }
+}
+
+@media(max-width:767px) {
+    .pt-110 {
+        padding-top: 60px;
+    }
+
+    .main-content p.pb-205 {
+        padding-bottom: 15px;
+    }
+
+    .right-sec {
+        margin-top: 20px;
+    }
+
+    .pb-90 {
+        padding-bottom: 60px;
+    }
+
+    .gap-20 {
+        row-gap: 20px;
+    }
+
+    .member-list li {
+        width: 33.3%;
+    }
+
+
+
+
+
+    .row-reverse {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .resource-slider .slick-arrow {
+        display: none !important;
+    }
+
+
+
+    header .navbar-brand .cu-logo {
+        width: 105px;
+    }
+
+    .h-minus-160 {
+        margin-top: 0;
+    }
+
+    .pb-265 {
+        padding-bottom: 60px;
+    }
+
+    .invisible.sub-heading {
+        display: none;
+    }
+
+    .invisible.sub-heading~.para {
+        margin-bottom: 0 !important;
+    }
+
+    #outsomes.pb-100 {
+        padding-top: 0 !important;
+    }
+}
+
+@media(max-width:575px) {
+    .rightSec {
+        justify-content: flex-start;
+    }
+
+    .certificate-sec {
+        width: 100%;
+    }
+
+    .list-icon p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    #custom-tabs .accordion-body .list-icon {
+        margin-bottom: 10px;
+    }
+
+    .member-details h2 {
+        font-size: 14px;
+        line-height: 14px;
+    }
+
+    .member-details p,
+    .member-list p {
+        font-size: 12px;
+        line-height: 14px;
+    }
+
+    .member-details h6 {
+        font-size: 12px;
+    }
+
+    /* 
+    .sub-heading {
+        margin-top: 0 !important;
+        margin-bottom: 15px !important;
+    } */
+
+    .form-sec {
+        flex-direction: column;
+        gap: 10px;
+        align-content: normal;
+        align-items: normal;
+    }
+
+    .form-sec label {
+        min-width: auto;
+    }
+
+    #customTabContent {
+        padding: 35px;
+    }
+
+    #customTab {
+        margin-top: 20px;
+    }
+
+    #customTab li button {
+        font-size: 16px;
+        line-height: 30px;
+    }
+
+    /* .about-content .sub-heading,
+    #outsomes .sub-heading,
+    #schedule .sub-heading {
+        margin-top: 20px !important;
+        margin-bottom: 10px !important;
+    } */
+
+    .member-list li h5 {
+        font-size: 14px;
+        line-height: 14px;
+    }
+
+    #hero-banner {
+        background-position: right !important;
+    }
+
+    .footer-content .invisible {
+        display: none;
+    }
+
+    .copyright p {
+        font-size: 14px;
+    }
+
+    .conference-details h5 sup {
+        top: -6px;
+        font-size: 10px;
+    }
+
+    .main-content h4 {
+        font-size: 20px;
+        line-height: 20px;
+    }
+
+    .custom-accordion ul.listing-2 {
+        column-count: 1;
+    }
+
+    .btns {
+        flex-direction: column;
+    }
+}
+
+@media(max-width:479px) {
+    .main-content h1 {
+        font-size: 30px;
+        line-height: 30px;
+    }
+
+    #about .sub-heading {
+        text-align: left !important;
+    }
+
+}
+
+@media(max-width:359px) {
+    header .navbar-brand .cu-logo {
+        width: 120px;
+    }
+
+    header .navbar-brand .naac-logo {
+        width: 75px;
+    }
+
+    #conference-dates .conference-details {
+        min-width: auto;
+    }
+
+    .conference-venue h6 {
+        font-size: 16px;
+    }
+}
