@@ -1,4 +1,4 @@
-// ===================== IC2INS-2026 shared behaviour =====================
+// ===================== INCSTIC-2027 shared behaviour =====================
 
 // ---- nav scroll shadow ----
 const nav = document.getElementById('nav');
