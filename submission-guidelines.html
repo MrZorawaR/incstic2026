@@ -1,154 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Submission Guidelines — INCSTIC-2027</title>
-<link rel="icon" href="images/favicon.png" type="image/png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Submission Guidelines — INCSTIC-2027</title>
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
 
 </head>
+
 <body>
 
-<nav class="nav" id="nav">
-  <div class="nav-row nav-row-brand">
-    <a href="index.html" class="brand">
-      <span class="brand-logos">
-        <img src="images/incstic-logo.png" alt="INCSTIC-2027">
-      </span>
-      <div class="brand-text"><b>INCSTIC-2027</b><span>26–27 February 2027</span></div>
-    </a>
-    <button class="burger" id="burger"><i class="fa-solid fa-bars"></i></button>
+  <nav class="nav" id="nav">
+    <div class="nav-row nav-row-brand">
+      <a href="index.html" class="brand">
+        <span class="brand-logos">
+          <span class="brand-logos"><img src="images/geeta-university-logo.png" alt="Geeta University"
+              style="height:32px;"></span>
+          <img src="images/incstic-logo.png" alt="INCSTIC-2027">
+        </span>
+        <div class="brand-text"><b>INCSTIC-2027</b><span>26–27 February 2027</span></div>
+      </a>
+      <button class="burger" id="burger"><i class="fa-solid fa-bars"></i></button>
+    </div>
+
+    <div class="nav-row nav-row-links">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="">Home</a></li>
+        <li class="has-dropdown">
+          <button class="nav-drop-btn">About <i class="fa-solid fa-chevron-down"></i></button>
+          <div class="dropdown-menu">
+            <a href="index.html#about-geeta-university"><i class="fa-solid fa-building-columns"></i>About GU</a>
+            <a href="index.html#objectives"><i class="fa-solid fa-circle-info"></i>About INCSTIC</a>
+            <a href="index.html#about-cse"><i class="fa-solid fa-laptop-code"></i>About CSE</a>
+          </div>
+        </li>
+        <li><a href="track-details.html" class="">Call for Paper</a></li>
+        <li><a href="index.html#importantDates" class="">Important Dates</a></li>
+        <li><a href="submission-guidelines.html" class="active">Submission Guidelines</a></li>
+        <li><a href="camera-ready-submission.html" class="">Camera Ready Submission</a></li>
+        <li><a href="registration.html" class="">Registration</a></li>
+        <li><a href="index.html#committee">Committee</a></li>
+        <li><a href="index.html#speakers">Speakers</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-top">
+      <span class="brand-logos"><img src="images/geeta-university-logo.png" alt="Geeta University"
+          style="height:32px;"></span>
+      <span class="brand-logos"><img src="images/incstic-logo.png" alt="INCSTIC-2027" style="height:32px;"></span>
+      <button class="burger" id="closeBurger"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <a href="index.html">Home</a>
+    <div class="mobile-drop">
+      <a href="javascript:void(0)" class="mobile-toggle">About <i
+          class="fa-solid fa-chevron-down mobile-toggle-caret"></i></a>
+      <div class="mobile-sub">
+        <a href="index.html#about-geeta-university">About GU</a>
+        <a href="index.html#objectives">About INCSTIC</a>
+        <a href="index.html#about-cse">About CSE</a>
+      </div>
+    </div>
+    <a href="track-details.html">Call for Paper</a>
+    <a href="index.html#importantDates">Important Dates</a>
+    <a href="submission-guidelines.html">Submission Guidelines</a>
+    <a href="camera-ready-submission.html">Camera Ready Submission</a>
+    <a href="registration.html">Registration</a>
+    <a href="index.html#committee">Committee</a>
+    <a href="index.html#speakers">Speakers</a>
+    <a href="contact.html">Contact Us</a>
   </div>
 
-  <div class="nav-row nav-row-links">
-    <ul class="nav-links" id="navLinks">
-      <li><a href="index.html" class="">Home</a></li>
-      <li class="has-dropdown">
-        <button class="nav-drop-btn">About <i class="fa-solid fa-chevron-down"></i></button>
-        <div class="dropdown-menu">
-          <a href="index.html#about-geeta-university"><i class="fa-solid fa-building-columns"></i>About GU</a>
-          <a href="index.html#objectives"><i class="fa-solid fa-circle-info"></i>About INCSTIC</a>
-          <a href="index.html#about-cse"><i class="fa-solid fa-laptop-code"></i>About CSE</a>
+
+  <main>
+
+    <section class="page-hero" style="margin-bottom: 50px;">
+      <div class="dotgrid"></div>
+      <div class="blob blob1"></div>
+      <div class="blob blob2"></div>
+      <div class="wrap">
+
+        <h1 class="reveal">Submission Guidelines</h1>
+
+      </div>
+    </section>
+
+    <section class="">
+      <div class="wrap">
+        <div class="prose reveal" style="max-width:820px;">
+          <p style="text-align: justify;">Authors are invited to contribute to the
+            conference by submitting original research articles that illustrate novel findings, significant projects,
+            comprehensive surveys, or industrial experiences in the fields of Smart Technologies and Intelligent
+            Computing. Submissions should highlight advancements, challenges and opportunities within these domains.</p>
+          <ul>
+
+            <li>Artificial Intelligence, Machine Learning, Data Science, and Computational Science</li>
+
+            <li>Bioinformatics, Biomedical Engineering, Digital Health, and Health Informatics</li>
+
+            <li>Next-Generation Computing, Engineering Systems, Networks, and Smart Technologies</li>
+
+            <li>Cybersecurity, Blockchain, Intelligent Applications, Digital Society, and Management</li>
+
+          </ul>
+          <p style="text-align: justify; max-width: 1020px;">Interested authors are invited to submit full papers
+            including results, figures and references. Papers will be accepted only by electronic submission through the
+            Microsoft CMT link below.</p>
+
+          <div class="dl-row">
+            <a class="btn btn-primary" href="https://cmt3.research.microsoft.com/INCSTIC2027" target="_blank"
+              rel="noopener"><i class="fa-solid fa-file-arrow-up"></i>Submit via Microsoft CMT</a>
+            <a class="btn btn-ghost"
+              href="https://digitech.sciencesconf.org/data/pages/springer_template_.doc_2.docx"><i
+                class="fa-solid fa-download"></i>Download Conference Template</a>
+          </div>
+
+          <h3>Plagiarism Policy</h3>
+          <p style="text-align: justify;">All manuscripts submitted to INCSTIC-2027 follow a double-blind review
+            process, and authors are instructed not to include their details while submitting the manuscript.</p>
+          <p style="text-align: justify;">INCSTIC-2027 takes plagiarism very seriously and regards it as professional
+            misconduct. Papers are screened for plagiarism, and any paper found to contain plagiarised content will be
+            rejected. Only papers detected with less than 15% similarity (including references and DOI numbers) are
+            carried forward to the next stage of review. No AI-generated content (such as from ChatGPT) is allowed — if
+            AI-generated content is found at any stage, the paper will be rejected, even after successful registration.
+          </p>
         </div>
-      </li>
-      <li><a href="track-details.html" class="">Call for Paper</a></li>
-      <li><a href="index.html#importantDates" class="">Important Dates</a></li>
-      <li><a href="submission-guidelines.html" class="active">Submission Guidelines</a></li>
-      <li><a href="camera-ready-submission.html" class="">Camera Ready</a></li>
-      <li><a href="registration.html" class="">Registration</a></li>
-      <li><a href="index.html#committee">Committee</a></li>
-      <li><a href="index.html#speakers">Speakers</a></li>
-      <li><a href="contact.html">Contact Us</a></li>
-    </ul>
-  </div>
-</nav>
+      </div>
+    </section>
 
-<div class="mobile-menu" id="mobileMenu">
-  <div class="mobile-menu-top">
-    <span class="brand-logos"><img src="images/incstic-logo.png" alt="INCSTIC-2027" style="height:32px;"></span>
-    <button class="burger" id="closeBurger"><i class="fa-solid fa-xmark"></i></button>
-  </div>
-  <a href="index.html">Home</a>
-  <div class="mobile-drop">
-    <a href="javascript:void(0)" class="mobile-toggle">About <i class="fa-solid fa-chevron-down mobile-toggle-caret"></i></a>
-    <div class="mobile-sub">
-      <a href="index.html#about-geeta-university">About GU</a>
-      <a href="index.html#objectives">About INCSTIC</a>
-      <a href="index.html#about-cse">About CSE</a>
-    </div>
-  </div>
-  <a href="track-details.html">Call for Paper</a>
-  <a href="index.html#importantDates">Important Dates</a>
-  <a href="submission-guidelines.html">Submission Guidelines</a>
-  <a href="camera-ready-submission.html">Camera Ready Submission</a>
-  <a href="registration.html">Registration</a>
-  <a href="index.html#committee">Committee</a>
-  <a href="index.html#speakers">Speakers</a>
-  <a href="contact.html">Contact Us</a>
-</div>
+  </main>
 
-
-<main>
-
-  <section class="page-hero" style="margin-bottom: 50px;">
-    <div class="dotgrid"></div>
-    <div class="blob blob1"></div>
-    <div class="blob blob2"></div>
+  <footer id="footer">
     <div class="wrap">
-      <div class="crumb reveal"><a href="index.html">Home</a><span>/</span><span>Submission Guidelines</span></div>
-      <h1 class="reveal">Submission Guidelines</h1>
-      <p class="reveal" style="text-align: justify; max-width: 820px;">Authors are invited to contribute to the conference by submitting original research articles that illustrate novel findings, significant projects, comprehensive surveys, or industrial experiences in the fields of Smart Technologies and Intelligent Computing. Submissions should highlight advancements, challenges and opportunities within these domains.</p>
-    </div>
-  </section>
-
-  <section class="">
-    <div class="wrap">
-      <div class="prose reveal" style="max-width:820px;">
-        <ul>
-          
-          <li>Artificial Intelligence, Machine Learning, Data Science, and Computational Science</li>
-          
-          <li>Bioinformatics, Biomedical Engineering, Digital Health, and Health Informatics</li>
-          
-          <li>Next-Generation Computing, Engineering Systems, Networks, and Smart Technologies</li>
-          
-          <li>Cybersecurity, Blockchain, Intelligent Applications, Digital Society, and Management</li>
-          
-        </ul>
-        <p style="text-align: justify; max-width: 1020px;">Interested authors are invited to submit full papers including results, figures and references. Papers will be accepted only by electronic submission through the Microsoft CMT link below.</p>
-
-        <div class="dl-row">
-          <a class="btn btn-primary" href="https://cmt3.research.microsoft.com/INCSTIC2027" target="_blank" rel="noopener"><i class="fa-solid fa-file-arrow-up"></i>Submit via Microsoft CMT</a>
-          <a class="btn btn-ghost" href="#"><i class="fa-solid fa-download"></i>Download Conference Template</a>
+      <div class="foot-grid">
+        <div>
+          <div class="foot-brand"><img src="images/incstic-logo.png" alt="INCSTIC-2027"></div>
+          <h4>INCSTIC-2027</h4>
+          <p style="max-width:34ch; margin-top:8px;">1st International Conference on
+            Next-Generation Computing, Smart Technologies, and Intelligent Computing, School of Computer Science and
+            Engineering, Geeta University.</p>
         </div>
-
-        <h3>Plagiarism Policy</h3>
-        <p style="text-align: justify;">All manuscripts submitted to INCSTIC-2027 follow a double-blind review process, and authors are instructed not to include their details while submitting the manuscript.</p>
-        <p style="text-align: justify;">INCSTIC-2027 takes plagiarism very seriously and regards it as professional misconduct. Papers are screened for plagiarism, and any paper found to contain plagiarised content will be rejected. Only papers detected with less than 15% similarity (including references and DOI numbers) are carried forward to the next stage of review. No AI-generated content (such as from ChatGPT) is allowed — if AI-generated content is found at any stage, the paper will be rejected, even after successful registration.</p>
+        <div class="fcol">
+          <h6>Navigate</h6>
+          <a href="index.html#about-geeta-university">About</a>
+          <a href="track-details.html">Call for Paper</a>
+          <a href="index.html#importantDates">Important Dates</a>
+          <a href="submission-guidelines.html">Submission Guidelines</a>
+          <a href="camera-ready-submission.html">Camera Ready</a>
+          <a href="registration.html">Registration</a>
+        </div>
+        <div class="fcol">
+          <h6>Get in Touch</h6>
+          <p style="color:#fff; font-weight:700; margin-bottom:8px;">Dr. Meenu Gupta</p>
+          <div class="contact-line"><i class="fa-solid fa-phone"></i><a href="tel:+91 8708951544"
+              style="color:#a9c2d8;">8708951544</a></div>
+          <div class="contact-line"><i class="fa-solid fa-envelope"></i><a
+              href="mailto:meenu.gupta@geetauniversity.edu.in"
+              style="color:#a9c2d8;">meenu.gupta@geetauniversity.edu.in</a></div>
+          <div class="contact-line"><i class="fa-solid fa-location-dot"></i><span>Geeta University, Naultha, Panipat,
+              Haryana, India</span></div>
+        </div>
+      </div>
+      <div class="fbar">
+        <span>© 2027 1st International Conference on Next-Generation Computing, Smart Technologies, and Intelligent
+          Computing (INCSTIC)</span>
+        <span>Peer review managed via Microsoft CMT</span>
       </div>
     </div>
-  </section>
+  </footer>
 
-</main>
-
-<footer id="footer">
-  <div class="wrap">
-    <div class="foot-grid">
-      <div>
-        <div class="foot-brand"><img src="images/incstic-logo.png" alt="INCSTIC-2027"></div>
-        <h4>INCSTIC-2027</h4>
-        <p style="max-width:34ch; margin-top:8px;">1st International Conference on
-Next-Generation Computing, Smart Technologies, and Intelligent Computing, School of Computer Science and Engineering, Geeta University.</p>
-      </div>
-      <div class="fcol">
-        <h6>Navigate</h6>
-        <a href="index.html#about-geeta-university">About</a>
-        <a href="track-details.html">Call for Paper</a>
-        <a href="index.html#importantDates">Important Dates</a>
-        <a href="submission-guidelines.html">Submission Guidelines</a>
-        <a href="camera-ready-submission.html">Camera Ready</a>
-        <a href="registration.html">Registration</a>
-      </div>
-      <div class="fcol">
-        <h6>Get in Touch</h6>
-        <p style="color:#fff; font-weight:700; margin-bottom:8px;">Dr. Meenu Gupta</p>
-        <div class="contact-line"><i class="fa-solid fa-phone"></i><a href="tel:+91 8708951544" style="color:#a9c2d8;">8708951544</a></div>
-        <div class="contact-line"><i class="fa-solid fa-envelope"></i><a href="mailto:meenu.gupta@geetauniversity.edu.in" style="color:#a9c2d8;">meenu.gupta@geetauniversity.edu.in</a></div>
-        <div class="contact-line"><i class="fa-solid fa-location-dot"></i><span>Geeta University, Naultha, Panipat, Haryana, India</span></div>
-      </div>
-    </div>
-    <div class="fbar">
-      <span>© 2027 1st International Conference on Next-Generation Computing, Smart Technologies, and Intelligent Computing (INCSTIC)</span>
-      <span>Peer review managed via Microsoft CMT</span>
-    </div>
-  </div>
-</footer>
-
-<script src="js/main.js"></script>
+  <script src="js/main.js"></script>
 </body>
+
 </html>
