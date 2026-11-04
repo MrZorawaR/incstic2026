@@ -42,6 +42,37 @@ document.querySelectorAll('.mobile-menu a:not(.mobile-toggle)').forEach(a=>{
   a.addEventListener('click', ()=> mobileMenu && mobileMenu.classList.remove('open'));
 });
 
+// ---- force special hash links to re-scroll even when already at the target ----
+document.addEventListener('click', (event) => {
+  const link = event.target.closest('a');
+  if (!link) return;
+
+  const href = (link.getAttribute('href') || '').trim();
+  if (!href) return;
+
+  const match = href.match(/(?:^|[/?#])(?:index\.html)?#?(importantDates|RegistrationDetails)(?:$|[?#])/i);
+  if (!match) return;
+
+  event.preventDefault();
+
+  const id = match[1];
+  const target = document.getElementById(id);
+  if (!target) return;
+
+  const targetY = Math.max(0, target.getBoundingClientRect().top + window.scrollY - 90);
+  const currentY = window.scrollY;
+
+  if (Math.abs(currentY - targetY) < 25) {
+    window.scrollTo({ top: Math.max(0, currentY + 5), behavior: 'auto' });
+    setTimeout(() => {
+      window.scrollTo({ top: targetY, behavior: 'smooth' });
+    }, 30);
+    return;
+  }
+
+  window.scrollTo({ top: targetY, behavior: 'smooth' });
+});
+
 // ---- reveal on scroll ----
 const revealer = new IntersectionObserver((entries)=>{
   entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); revealer.unobserve(e.target); } });
